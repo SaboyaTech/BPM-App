@@ -3338,13 +3338,13 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 
 @media (max-width: 1199px) {
-    .navbar {
-        /*
+    /* .navbar { */
+        
     .navbar-form {
-      margin-top: 10px;
+        margin-top: 10px;
     }
-*/
-    }
+
+    
     .navbar .navbar-brand {
         height: 50px;
         padding: 10px 15px;
