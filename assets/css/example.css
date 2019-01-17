@@ -164,3 +164,23 @@ nav .navbar-header {
     -ms-transform: translate3d(0px, 0, 0);
     transform: translate3d(0px, 0, 0);
 }
+
+.header.header-primary.text-center {
+    width: 101%;
+    position: relative;
+    left: -6%;
+}
+
+img.img.container {
+    width: 8%;
+    float: left;
+    border-radius: 50%;
+}
+
+.input-group {
+    margin-top: 10%;
+}
+
+login-page .footer .container {
+    padding: 100px;
+}
