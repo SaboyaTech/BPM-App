@@ -50,3 +50,12 @@ Here I thought we could demonstrate the new technology. SASS is a much easier an
 New Technology: 
 
 SASS - CSS Extension
+
+npm install -g node-sass
+npm install -g gulp-sass
+
+//windows
+npm install -g gulp
+//mac
+sudo -s npm install -g gulp
+
