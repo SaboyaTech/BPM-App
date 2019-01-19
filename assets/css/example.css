@@ -184,3 +184,20 @@ img.img.container {
 login-page .footer .container {
     padding: 100px;
 }
+
+.container.carousel{
+    margin-left:-100%;
+    margin-top:-100%;
+}
+
+.carousel-inner{
+    position: relative;
+    width: 147%;
+    overflow: -webkit-paged-x;
+    margin-left:-30%;
+    margin-top:15%;
+}
+
+.container.middle {
+    margin-top: 10%;
+}
