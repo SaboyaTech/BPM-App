@@ -181,10 +181,6 @@ img.img.container {
     margin-top: 10%;
 }
 
-login-page .footer .container {
-    padding: 100px;
-}
-
 .container.carousel{
     margin-left:-100%;
     margin-top:-100%;
@@ -198,6 +194,30 @@ login-page .footer .container {
     margin-top:15%;
 }
 
+.header.header-primary.text-center {
+    background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+}
+
+.main {
+    display: none;
+    height: 800px;
+}
+
 .container.middle {
-    margin-top: 10%;
+    margin-top: 25px;
+    padding: 10px !important; 
+}
+
+.lyrics {
+    height: 500px;
+    overflow: auto
+
+}
+
+.footer {
+    margin-top: 40px;
+}
+
+login-page .footer .container {
+    padding: 100px;
 }
