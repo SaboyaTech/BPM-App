@@ -202,7 +202,7 @@ img.img.container {
 }
 
 .main {
-    /* display: none; */
+    display: none;
     height: 800px;
 }
 
