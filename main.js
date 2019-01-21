@@ -95,7 +95,7 @@
 // This function creates an <iframe> (and YouTube player) after the API code downloads.
  var player;
  function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
+  player = new YT.Player('ytplayer', {
     height: '390',
     width: '640',
     videoId: 'DRS_PpOrUZ4',
