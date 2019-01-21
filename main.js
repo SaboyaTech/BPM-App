@@ -68,7 +68,18 @@ function captureInput(event) {
   console.log(inputSearchQuery);
   lyricSearch.queryCall(inputSearchQuery);
 
-  // YouTube -----------------------------------------------------
+  // The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+}
+
+$(".searchBtn").on("click", captureInput);
+
+$("#searchForm").on("submit", captureInput);
+
+// YouTube -----------------------------------------------------
   // Load the IFrame Player API code asynchronously.
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
@@ -89,22 +100,3 @@ function captureInput(event) {
       }
     });
   }
-
-  // The API will call this function when the video player is ready.
-  function onPlayerReady(event) {
-    event.target.playVideo();
-  }
-
-}
-
-$(".searchBtn").on("click", captureInput);
-
-$("#searchForm").on("submit", captureInput);
-
-
-$.ajax({
-  url: "https://app.ticketmaster.com/discovery/v2/attractions.json?keyboard=drake&apikey=CGIA0HC4MWpGGWWfA5qpFzAwJNDAxL2B",
-  method: "GET",
-}).then(function (response) {
-  console.log(response);
-});
