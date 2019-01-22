@@ -1,29 +1,61 @@
-// var youTube = {
-//   key: "AIzaSyD-D_v3VA2ZyoLiCLSSsCO7q81FaSnRLHA",
-//   url: 'http://www.googleapis.com/youtube/v3/search',
+var artistName;
+var songTitle;
+var youtubeSearch;
+var youtubeVideoId;
 
-//   getRequest: function (searchTerm) {
-//     var url = 'https://www.googleapis.com/youtube/v3/search';
-//     var params = {
-//       part: 'snippet',
-//       key: key,
-//       q: searchTerm,
-//       maxResults: '1',
-//     };
 
-//     $.ajax({
-//       url: url,
-//       dataType: 'json',
-//       data: params,
-//       success: showResults
-//     }).then(function (response) {
-//       console.log(response);
-//     });
-//   },
+// Captures Input When Search Now is clicked or Enter is pressed
+function captureInput(event) {
+  event.preventDefault();
+  artistName = $(".artist").val();
+  songTitle = $(".song").val();
+  youtubeSearch = artistName + " " + songTitle;
+  console.log({
+    artistName: artistName,
+    songTitle: songTitle,
+    youtubeSearch: youtubeSearch
+  });
 
-// };
+  YouTube.getRequest(youtubeSearch);
+  console.log(youtubeVideoId);
 
-// ----------------------------------------------------------------
+  // it obtains the values and formats the query part for the search
+  var inputSearchQuery = lyricSearch.getInput(artistName, songTitle);
+  console.log(inputSearchQuery);
+  lyricSearch.queryCall(inputSearchQuery);
+}
+
+$(".searchBtn").on("click", captureInput);
+
+$("#searchForm").on("submit", captureInput);
+
+// YouTube -----------------------------------------------------
+// YouTube Object to Obtain Video Id
+var YouTube = {
+  key: "AIzaSyD-D_v3VA2ZyoLiCLSSsCO7q81FaSnRLHA",
+
+  getRequest: function (youtubeSearch) {
+    var url = 'https://www.googleapis.com/youtube/v3/search';
+    var params = {
+        part: 'snippet',
+        key: this.key,
+        q: youtubeSearch,
+        maxResults: '1',
+    };
+
+    $.ajax({
+        url: url,
+        dataType: 'json',
+        data: params,
+        // success: showResults
+    }).then(function (response) {
+        youtubeVideoId = response.items[0].id.videoId;
+        console.log(youtubeVideoId);
+    });
+  }
+}
+
+// Lyrics---------------------------------------------------------
 var lyricSearch = {
 
   artist: "",
@@ -56,30 +88,6 @@ var lyricSearch = {
   }
 };
 
-function captureInput(event) {
-  event.preventDefault();
-  artistName = $(".artist").val();
-  songTitle = $(".song").val();
-  console.log({
-    artistName: artistName,
-    songTitle: songTitle
-  });
-  var inputSearchQuery = lyricSearch.getInput(artistName, songTitle);
-  console.log(inputSearchQuery);
-  lyricSearch.queryCall(inputSearchQuery);
-
-  // The API will call this function when the video player is ready.
-  function onPlayerReady(event) {
-    event.target.playVideo();
-  }
-
-}
-
-$(".searchBtn").on("click", captureInput);
-
-$("#searchForm").on("submit", captureInput);
-
-// YouTube -----------------------------------------------------
 // Load the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
@@ -94,13 +102,13 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('ytplayer', {
     height: '390',
     width: '640',
-    videoId: 'DRS_PpOrUZ4',
+    videoId: "DRS_PpOrUZ4",
     events: {
       'onReady': onPlayerReady
     }
   });
+  
 }
-
 // The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   event.target.playVideo();
