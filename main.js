@@ -36,7 +36,7 @@ $("#searchForm").on("submit", captureInput);
 // YouTube Object to Obtain Video Id
 var YouTube = {
   key: "AIzaSyD-D_v3VA2ZyoLiCLSSsCO7q81FaSnRLHA",
-  firstPart: "http://www.youtube.com/embed/",
+  firstPart: "https://www.youtube.com/embed/",
 
   getRequest: function (youtubeSearch) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
