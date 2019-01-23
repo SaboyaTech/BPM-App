@@ -7317,5 +7317,3 @@ select.selectpicker {
 @media all and (max-width: 1050px) and (min-width: 991px) {
   .main.main-raised .container {
     width: 920px; } }
-body {
-  background: black; }

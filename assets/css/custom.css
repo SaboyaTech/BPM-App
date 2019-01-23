@@ -3,7 +3,7 @@
 }
 
 .page-header.header-filter {
-    background-image: url(https://files.slack.com/files-pri/TD38S1EJY-FFDMSMUCW/mohammad-alizade-631039-unsplash.jpg);
+    background-image: url(../img/mainBg.jpg);
     background-size: cover; 
     background-position: top center;
 }
@@ -28,6 +28,7 @@
     float: right;
 }
 .navbar-collapse {
+    color: white;
     position: fixed;
     display: block;
     top: 0px;
@@ -37,7 +38,7 @@
     margin-right: 0 !important;
     z-index: 1032;
     visibility: visible;
-    background-color: #999;
+    background-color: rgb(250, 248, 248)!important;
     overflow-y: visible;
     border-top: none;
     text-align: left;
@@ -72,18 +73,19 @@
     display: block;
     height: 1px;
     margin-left: 15px;
-    background-color: #e5e5e5;
+    background-color: #ffffff;
 }
 .navbar-collapse .nav > li:last-child:after {
     display: none;
 }
 .navbar-collapse::after {
+    color: white;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: rgb(0, 0, 0);
     display: block;
     content: "";
     z-index: 1;
@@ -107,7 +109,8 @@
     margin-top: 0;
 }
 .navbar .navbar-collapse .navbar-nav > li > a {
-    color: #3C4858;
+    font-weight: bolder !important;
+    color: rgb(51, 228, 204);
     margin: 5px 15px;
 }
 .navbar .navbar-collapse .navbar-nav > li > a:hover, .navbar .navbar-collapse .navbar-nav > li > a:focus {
@@ -181,10 +184,6 @@ img.img.container {
     margin-top: 10%;
 }
 
-login-page .footer .container {
-    padding: 100px;
-}
-
 .container.carousel{
     margin-left:-100%;
     margin-top:-100%;
@@ -198,6 +197,79 @@ login-page .footer .container {
     margin-top:15%;
 }
 
+.header.header-primary.text-center {
+    background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+}
+
+.main {
+    display: none;
+    height: 800px;
+}
+
 .container.middle {
-    margin-top: 10%;
+    margin-top: 25px;
+    padding: 10px !important; 
+}
+
+.lyrics {
+    height: 500px;
+    overflow: auto
+
+}
+
+.footer {
+    margin-top: 40px;
+}
+
+login-page .footer .container {
+    padding: 100px;
+}
+
+/* Tests layout */
+
+html, body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid  {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    overflow: hidden;
+    width: 100%;
+    background-color: pink;
+    height: 100%;
+}
+/* 
+header.minimize {
+    height: 10vh;
+    transition: ease .5s;
+} */
+
+main {
+    display: flex;
+    flex-direction: row;
+    /* height: 90vh; */
+}
+
+#video {
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+    /* display: none; */
+}
+
+#lyrics {
+    background-color: red;
+    width: 50%;
+    height: 100%;
+    /* display: none; */
 }
