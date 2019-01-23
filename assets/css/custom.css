@@ -224,3 +224,52 @@ img.img.container {
 login-page .footer .container {
     padding: 100px;
 }
+
+/* Tests layout */
+
+html, body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid  {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    overflow: hidden;
+    width: 100%;
+    background-color: pink;
+    height: 100%;
+}
+/* 
+header.minimize {
+    height: 10vh;
+    transition: ease .5s;
+} */
+
+main {
+    display: flex;
+    flex-direction: row;
+    /* height: 90vh; */
+}
+
+#video {
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+    /* display: none; */
+}
+
+#lyrics {
+    background-color: red;
+    width: 50%;
+    height: 100%;
+    /* display: none; */
+}

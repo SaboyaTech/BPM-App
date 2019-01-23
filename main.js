@@ -25,7 +25,10 @@ function captureInput(event) {
   lyricSearch.queryCall(inputSearchQuery);
 }
 
-$(".searchBtn").on("click", captureInput);
+// $(".searchBtn").on("click", captureInput, function(event) {
+//   $("header").addClass("minimize");
+// });
+
 
 $("#searchForm").on("submit", captureInput);
 
@@ -33,6 +36,7 @@ $("#searchForm").on("submit", captureInput);
 // YouTube Object to Obtain Video Id
 var YouTube = {
   key: "AIzaSyD-D_v3VA2ZyoLiCLSSsCO7q81FaSnRLHA",
+  firstPart: "http://www.youtube.com/embed/",
 
   getRequest: function (youtubeSearch) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
@@ -51,6 +55,7 @@ var YouTube = {
     }).then(function (response) {
         youtubeVideoId = response.items[0].id.videoId;
         console.log(youtubeVideoId);
+        $("#player").attr("src", YouTube.firstPart + youtubeVideoId); 
     });
   }
 }
@@ -88,28 +93,3 @@ var lyricSearch = {
   }
 };
 
-// Load the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// This function creates an <iframe> (and YouTube player) after the API code downloads.
-var player;
-
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('ytplayer', {
-    height: '390',
-    width: '640',
-    videoId: "DRS_PpOrUZ4",
-    events: {
-      'onReady': onPlayerReady
-    }
-  });
-  
-}
-// The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
