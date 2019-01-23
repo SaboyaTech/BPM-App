@@ -107,40 +107,48 @@
 			<div class="container middle">
 				<div class="row">
 					<!-- Lyrics Section -->
-					<div class="col-12 col-md-12">
+					<div class="col-sm-12 col-md-12">
 
-						<div id="ytplayer" class="col-6 col-md-6"></div>
-						<div class="col-6 col-md-6 lyrics"></div>
+						<iframe 
+							class="col-6 col-md-6" 
+							id="player" 
+							width="640" height="390" 
+							frameborder="0" 
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							 >
+						</iframe>
 
-					</div>
+						<div class="col-6 col-sm-12 col-md-6  lyrics"></div>
+
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<footer class="footer">
-			<div class="container">
-				<nav class="pull-left">
-					<ul>
-						<li>
-							<a href="http://www.creative-tim.com">
-								Home Page
-							</a>
-						</li>
-						<li>
-							<a href="http://presentation.creative-tim.com">
-								About Us
-							</a>
-						</li>
+	<footer class="footer">
+		<div class="container">
+			<nav class="pull-left">
+				<ul>
+					<li>
+						<a href="http://www.creative-tim.com">
+							Home Page
+						</a>
+					</li>
+					<li>
+						<a href="http://presentation.creative-tim.com">
+							About Us
+						</a>
+					</li>
 
-					</ul>
-				</nav>
-				<div class="copyright pull-right">
-					&copy;
-					<script>document.write(new Date().getFullYear())</script> made by <a href="http://www.creative-tim.com" target="_blank">
-						BPM Music Hub</a>
-				</div>
+				</ul>
+			</nav>
+			<div class="copyright pull-right">
+				&copy;
+				<script>document.write(new Date().getFullYear())</script> made by <a href="http://www.creative-tim.com" target="_blank">
+					BPM Music Hub</a>
 			</div>
-		</footer>
+		</div>
+	</footer>
 
 	</div>
 	<!--   Core JS Files   -->
@@ -166,7 +174,7 @@
 	<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput   -->
 	<script src="assets/js/jasny-bootstrap.min.js"></script>
 
-	
+
 	<!--    Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc    -->
 	<script src="assets/js/material-kit.js?v=1.3.0" type="text/javascript"></script>
 
