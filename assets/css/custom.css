@@ -224,3 +224,7 @@ img.img.container {
 login-page .footer .container {
     padding: 100px;
 }
+
+.container.middle {
+    margin-top: 6%;
+}
