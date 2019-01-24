@@ -105,9 +105,9 @@ var lyricSearch = {
 
 
 // click ajax call
-// $("#search").on("click", function() {
+// function bioParagraph() {
 //   var searchTerm = $(".artist").val();
-//   var url = "https://en.wikipedia.org/w/action=templatedata&search="+ searchTerm + "(singer)" +"&imit=0&format=json&callback=?"; 
+//   var url = "https://en.wikipedia.org/w/action=opensearch&search="+ searchTerm + "(singer)" +"&imit=0&format=json&callback=?"; 
 //   $.ajax({
 //     url: url,
 //     type: 'GET',
@@ -117,7 +117,9 @@ var lyricSearch = {
 
 //     // plop data
 //     success: function(data) {
+
 //       console.log(data);
+
 //       $("#output").html();
 
 //       for(var i = 0; i < 0; i++){
@@ -140,9 +142,10 @@ var lyricSearch = {
 //   });
     
     
-// });
+// };
 
 $("#searchForm").on("click", captureInput);
+
 
 
 
