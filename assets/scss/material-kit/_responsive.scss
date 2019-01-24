@@ -1,4 +1,4 @@
-@media (min-width: $screen-md-min){
+@media (min-width: 768px ){
     .navbar{
         .navbar-collapse{
             text-align: center;
@@ -14,7 +14,17 @@
         overflow: auto;
     }
 }
-@media (max-width: $screen-sm-max){
+
+@media (max-width: 768px){
+
+    iframe#player {
+        margin-left: 4%;
+    }
+
+    .Vid{
+        display: none;
+    }
+
 
     .page-header{
         height: auto;
@@ -98,7 +108,7 @@
     }
 
 }
-@media (max-width: $screen-xs-max){
+@media (max-width: 425px){
     h1,
     .h1,
     .presentation-page .brand h1{
@@ -119,9 +129,35 @@
         }
     }
 
+    iframe#player {
+        margin-left: 4%;
+        width: 92%;
+    }
+
+    .Vid{
+        display: none;
+    }
+
+    input.form-control.artist {
+        position: relative;
+        left: 0%;
+    }
+
+    button#searchForm {
+        float: right;
+        margin: -36%;
+    }
+
+    form.navbar-form.navbar-right {
+        position: absolute;
+        left: 34%;
+        top: -5%;
+    }
+
+
 }
 
-@media all and (max-width: $screen-md) {
+@media all and (max-width: 375px) {
   #bodyClick {
       height: 100%;
       width: 100%;
