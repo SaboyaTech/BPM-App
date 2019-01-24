@@ -3,10 +3,21 @@ var songTitle;
 var youtubeSearch;
 var youtubeVideoId;
 
+$("#Carousel").show();
+
+$(".main").hide();
+
+console.log("its working, now make the button work")
 
 // Captures Input When Search Now is clicked or Enter is pressed
 function captureInput(event) {
+
+  $("#Carousel").hide();
+
+  $(".main").show();
+  
   event.preventDefault();
+
   artistName = $(".artist").val();
   songTitle = $(".song").val();
   youtubeSearch = artistName + " " + songTitle;
@@ -24,13 +35,6 @@ function captureInput(event) {
   console.log(inputSearchQuery);
   lyricSearch.queryCall(inputSearchQuery);
 }
-
-// $(".searchBtn").on("click", captureInput, function(event) {
-//   $("header").addClass("minimize");
-// });
-
-
-$("#searchForm").on("submit", captureInput);
 
 // YouTube -----------------------------------------------------
 // YouTube Object to Obtain Video Id
@@ -92,4 +96,54 @@ var lyricSearch = {
     });
   }
 };
+
+//BIO ---------------------------------
+// click ajax call
+
+
+// enter
+
+
+// click ajax call
+// $("#search").on("click", function() {
+//   var searchTerm = $(".artist").val();
+//   var url = "https://en.wikipedia.org/w/action=templatedata&search="+ searchTerm + "(singer)" +"&imit=0&format=json&callback=?"; 
+//   $.ajax({
+//     url: url,
+//     type: 'GET',
+//     contentType: "application/json; charset=utf-8",
+//     async: false,
+//     dataType: "json",
+
+//     // plop data
+//     success: function(data) {
+//       console.log(data);
+//       $("#output").html();
+
+//       for(var i = 0; i < 0; i++){
+//         $("#output").prepend("<div><div class='well'><a href="+data[3]+"><h2>" + data[1]+ "</h2>" + "<p>" + data[2] + "</p></a></div></div>");
+//       }
+//       // $("#output").prepend("<div><div class='well'><a href="+ data[3] +"><h2>" + data[1] + "</h2>" + "<p>" + data[2] + "</p></a></div></div>");
+
+
+//     }
+//   })
+
+//   .done(function() {
+//     console.log("success");
+//   })
+//   .fail(function() {
+//     console.log("error");
+//   })
+//   .always(function() {
+//     console.log("complete");
+//   });
+    
+    
+// });
+
+$("#searchForm").on("click", captureInput);
+
+
+
 

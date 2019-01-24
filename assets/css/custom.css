@@ -178,6 +178,7 @@ img.img.container {
     width: 8%;
     float: left;
     border-radius: 50%;
+    display: -webkit-inline-box;
 }
 
 .input-group {
@@ -218,7 +219,7 @@ img.img.container {
 }
 
 .footer {
-    margin-top: 40px;
+    margin-top: -81px;;
 }
 
 login-page .footer .container {
@@ -258,6 +259,8 @@ main {
     display: flex;
     flex-direction: row;
     /* height: 90vh; */
+    /* display: -webkit-inline-box;
+    margin-top: 15%; */
 }
 
 #video {
@@ -272,4 +275,94 @@ main {
     width: 50%;
     height: 100%;
     /* display: none; */
+}
+
+form.navbar-form.navbar-right {
+    position: absolute;
+    left: 51%;
+}
+
+.row {
+    margin-right: 20px;
+    margin-left: 30px;
+}
+.login-page .page-header .container {
+    padding-top: 1vh;
+}
+
+.page-header .carousel .carousel-indicators {
+    bottom: 20px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: -webkit-inline-box;
+    max-width: 100%;
+    height: -webkit-fill-available;
+}
+
+.main.main-raised{
+    display: unset;
+    color:white;
+
+}
+
+input.form-control.artist {
+    position: relative;
+    left: -8%;
+}
+
+h5.description {
+    color: white;
+}
+
+h4.card-title {
+    color: cadetblue;
+}
+
+.container.middle.display{
+    background: cadetblue;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+}
+
+.flex-container {
+    width: 143%;
+}
+
+pre {
+    /* width: 303%; */
+    height: 88%;
+    /* margin-left: 311%; */
+    /* margin-top: 34%; */
+}
+
+.lyrics {
+    height: 447px;
+    overflow: visible;
+}
+
+.flex-container {
+    width: 143%;
+    margin-left: -2%;
+    margin-top: 9%;
+}
+
+.Music {
+    position: relative;
+    left: 2%;
+}
+.Vid {
+    position: absolute;
+    top: 11%;
+    left: 50%;
+
+}
+.flowbox {
+    margin-top: 6%;
+    margin-right: 1%;
+}
+
+.info {
+    text-align: center;
 }
