@@ -1,7 +1,6 @@
 # BPM App
 
-https://joseluissaboya.github.io/BPM-App/
-
+https://saboyadev.github.io/BPM-App/
 Project 1 Proposal: (Project Name)
 
 Developers Role Breakdown:
