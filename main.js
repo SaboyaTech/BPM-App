@@ -39,7 +39,7 @@ function captureInput(event) {
 // YouTube -----------------------------------------------------
 // YouTube Object to Obtain Video Id
 var YouTube = {
-  key: "AIzaSyD-D_v3VA2ZyoLiCLSSsCO7q81FaSnRLHA",
+  key: "AIzaSyBtftLootvP9qssLM1yvsN7KUDyvavw0x8",
   firstPart: "https://www.youtube.com/embed/",
 
   getRequest: function (youtubeSearch) {
